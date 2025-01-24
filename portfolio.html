@@ -1,0 +1,212 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+	<style>
+		* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color:#333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: orange;
+    text-decoration: none;
+    font-size: 16px;
+}
+nav ul li a:hover{
+	color:white;
+	}
+
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: orange;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project {
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border:groove #333 5px;
+}
+div:hover{
+	color:red;
+	}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea {
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 5px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .navbar h1 {
+        font-size: 18px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+
+    form {
+        width: 80%;
+    }
+}
+
+	</style>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <h1 style="color:orange; font-size:20px;">Sivaranjinee</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <h2>ABOUT ME</h2>
+        <center><h4><i>Hello! I'm a first-year engineering student passionate about technology and problem-solving.<br> I am excited to learn and grow in the world of engineering and development !</i></h4></center>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>MY PROJECTS</h2>
+	<div class="project">
+		<h3>Project 1: Online Bag Selling Website</h3>
+		<h5>This is Website for selling collections of bags built using HTML,CSS to enhance my knowledge.</h5>
+	</div>
+        <div class="project">
+            <h3>Project 2: Simple Calculator</h3>
+            <h5>A basic calculator built using HTML, CSS, and JavaScript to practice coding fundamentals.</h5>
+        </div>
+        <div class="project">
+            <h3>Project 3: Personal Portfolio Website</h3>
+            <h5>This is the portfolio you're viewing! It's a showcase of my skills and learning.</h5>
+        </div>
+	<h2>SKILLS</h2>
+	<div class="project">
+            <h3>C++,HTML,CSS,JAVASCRIPT.</h3>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2><i>Contact Details</i></h2>
+	<center><h4>Contact No:8637548675</h4>
+	<h4>Mail ID:sivaranjinee23@gmail.com</h4></center><br>
+        <form id="contactForm">
+            <label for="name"><h4><i>Your Name:</i></h4></label>
+            <input type="text" id="name" name="name" placeholder="Enter your name"  required>
+
+            <label for="email"><h4><i>Your Email:</i></h4></label>
+            <input type="email" id="email" name="email" placeholder="Enter your email"  required>
+
+            <label for="message"><h4><i>Message:</i></h4></label>
+            <textarea id="message" name="message" placeholder="Message write here..."  required></textarea>
+
+            <button type="submit"><h3>Send</h3></button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sivaranjinee. All rights reserved.</p>
+    </footer>
+
+   	 <script>
+		document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents the default form submission
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name && email && message) {
+        alert('Form submitted successfully!');
+        // Reset the form
+        document.getElementById('contactForm').reset();
+    } else {
+        alert('Please fill out all fields.');
+    }
+});
+
+	</script>
+</body>
+</html>
